@@ -1,0 +1,260 @@
+*{
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: rgba(128,0,0,.6); /* rgba() attribute provides a fourth value for transparency [0,1] */
+		line-height: 22px;
+		/* short hand font properties font: font-style font-variant font-weight font-size/line-heights font-family; */
+		font-family: "Times New Roman", Georgia, sans-serif;
+		background: radial-gradient(#0288D1, #81D4FA);
+		
+	}
+
+	.navigation {
+		margin-top: 30px;
+		height: 75px;
+		 
+
+	}
+	.navigation ul {
+  		font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  		margin: 0;
+  		margin-left: 5px;
+  		padding: 0;
+  		text-transform: uppercase;
+
+	}
+	.navigation li {
+ 		display: inline-block;
+ 		width: auto;	
+	}
+	.navigation a {
+  		background: #395870;
+  		background: linear-gradient(#49708f, #293f50);
+  		border-right: 1px solid rgba(0, 0, 0, .3);
+  		color: #fff;
+  		padding: 12px 20px;
+  		text-decoration: none;
+  		position: relative;
+  		font-size: 20px;
+	}
+	.navigation a:hover {
+  		background: #314b60;
+  		box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+	}
+
+
+	p {
+		display: inline-block;
+		color: black;
+		padding: 10px;
+		margin-bottom: default;
+		font-size: 20px;
+		width: 25%;
+		margin: 0 1.0%;
+		text-shadow: 3px 6px 2px rgba(0, 0, 0, 0.2);
+		font-weight: 800px;
+	}
+	.container p.p1 {
+		margin: 10px;
+		background-color: yellow;
+		border: 5px double red;
+		border-bottom-width: 20px;
+		border-radius: 15px 75px;
+		text-align: center;
+		background-position: 50%;
+	}
+	/* selectors with higher specificity weights are given precedence and not according to the order in which they appear */
+	.container .p1 {
+		background-color: yellow;
+	}
+	.btn {
+		font-size: 20px;
+		display: block;
+		box-sizing: border-box;
+		margin: 0 auto; /* Auto sets equal left and right width thus centering the element */
+		padding: 5px;
+		margin-top: 10px;
+		border-radius: 5px;
+		border: 2px solid black;
+
+
+	}
+	.btn-success {
+		background-color: green;
+		transition-property: all 0.2s linear;
+	}
+
+	.btn-success:active {
+		transform: translateY(2px) translateX(2px);
+
+	}
+
+	.btn-danger {
+		background-color: red;
+		border-radius: 10px;
+ 		transition-property: background, border-radius;
+		transition-duration: 0.5s;
+		transition-delay: 0.2s;
+		height: 100px;
+		width: 100px;
+		text-align: center;
+
+	}
+	.btn-danger:hover {
+		background-color: white;
+		border-radius: 50%;
+	}
+
+	img {
+		height: 250px;
+		width: 250px;
+		padding: 10px 0px;
+	}
+
+	.container{
+		margin-left: 20px;
+		
+	}
+
+	.image-container {	
+		perspective: 600;
+		position: absolute;	
+
+	}
+
+	.image {
+		height: 250px;
+		position: relative;
+		transform-style: preserve-3d;
+		transition: all 1s ease-in-out;
+		width: 250px;
+	}
+
+	.image:hover {
+		transform: rotateY(180deg);
+	}
+
+	.image .image1 {
+		backface-visibility: hidden;
+		height: 250px;
+		position: absolute;
+		width: 250px;
+		overflow: hidden;
+	}
+	
+	.image .image2 {
+		transform: rotateY(180deg);
+
+	}
+	
+	
+	footer {
+		color: red;
+		background-color: yellow;
+		padding-left: 20px;
+		height: 24px;
+		margin-top: 10px;
+		
+	}
+
+	div ul .abc {
+		float: left;
+		margin-left: 50px;
+		font-size: 20px;
+	}
+
+	form {
+		margin-left: 0px;
+		display: block;
+		position: relative;
+		padding-top: 20px;
+	}
+	form textarea {
+		display: block;
+	}
+	form input {
+		display: block;
+	}
+
+	select {
+		margin-left: 20px;
+
+	}
+
+	/*Animations example */
+
+	@keyframes slide {
+		0% {
+			left: 0;
+			top: 0;
+		}
+		25% {
+			left: 244px;
+			top: 100px;
+		}
+		50%{
+			left: 488px;
+			top: 0;
+		}
+		75% {
+			left: 244px;
+			top: 100px;
+		}
+		100% {
+			left: 0px;
+			top: 0px;
+		}
+
+
+
+	}
+
+	.stage {
+		background: #eaeaed;
+		border-radius: 6px;
+		height: 150px;
+		position: relative;
+		max-width: 538px;
+		margin-left: 20px;
+	}
+	.ball {
+		background: #2db34a;
+		border-radius: 50%;
+		height: 50px;
+		position: relative;
+		width: 50px;
+		transition-property: background;
+		transition-duration: .3s;
+		transition-timing-function: ease-in;
+		transition-delay: 0.5s;
+	}
+	.stage:hover .ball {
+		animation-name: slide;
+		animation-duration: 2s;
+		animation-timing-function: ease-in-out;
+		animation-delay: .5s;
+		animation-iteration-count: infinite;
+		background: red;
+		
+	}
+	.stage:active .ball {
+		animation-play-state: paused;
+	}
+
+
+
+	
+/* To contain float elements */
+.clearfix:before, .clearfix:after {
+  content: "" ;
+  display: table;
+}
+  .clearfix:after {
+    clear: both;
+  }
+  .clearfix: {
+    clear: both;
+    *zoom: 1;
+  }
